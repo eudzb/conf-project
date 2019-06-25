@@ -48,16 +48,28 @@
           <h4 class="col mt-5 mb-4">Définissez la date et les horaires</h4>
         </div>
         <div class="form-row">
-          <div class="col p-0 mr-4">
+          <div class="col-md-4 p-0 mr-4">
             <input
             type="date"
             name="date"
             class="form-control">
           </div>
-          <div class="col p-0">
+          <div class="col-md-1 align-self-center text-right mr-2">
+            <span>Début</span>
+          </div>
+          <div class="col-md">
             <input
-            type="date"
-            name="date"
+            type="time"
+            name="start"
+            class="form-control">
+          </div>
+          <div class="col-md-1 align-self-center text-right mr-2">
+            <span>Fin</span>
+          </div>
+          <div class="col-md">
+            <input
+            type="time"
+            name="end"
             class="form-control">
           </div>
         </div>
