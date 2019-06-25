@@ -5,8 +5,8 @@ navbar
   <div class="row shadow">
     <div class="col-md-8">
       <div class="mt-4 p-3">
-        <span class="text-muted">lundi 24 juin 2019</span>
-        <h3>Android Maker 2020</h3>
+        <span class="text-muted">[lundi 24 juin 2019]</span>
+        <h3>[Android Maker 2020]</h3>
         <div class="d-flex align-items-center mt-2">
           <img
           src="../img/mytho.png"
@@ -15,7 +15,7 @@ navbar
           style="height:40px; width:40px">
           <div class="ml-2 text-muted">
             Animé par
-            <a class="text-primary pointer">Dousaï l'ancien</a>
+            <a class="text-primary pointer">[Dousaï l'ancien]</a>
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@ navbar
     <div class="col-md-4">
       <div class="mt-4 p-3">
         <span class="text-dark">Vous y aller ?</span>
-        <span class="ml-2 text-muted">16 personnes y vont</span>
+        <span class="ml-2 text-muted">[16] personnes y vont</span>
         <button
         type="button"
         name="participate"
@@ -49,17 +49,17 @@ navbar
       class="img-conf">
       <h5 class="mt-5 mb-5">Détails</h5>
       <div>
-        <p class="text-dark text-justify font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        <p class="text-dark text-justify font-weight-light">[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
           ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup
           ate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occ
           ecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum.</p>
-        <p class="text-dark text-justify font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          anim id est laborum.]</p>
+        <p class="text-dark text-justify font-weight-light">[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat.</p>
+          ex ea commodo consequat.]</p>
       </div>
     </div>
 
@@ -67,16 +67,16 @@ navbar
       <div class="d-flex mt-4">
         <i class="ml-3 material-icons dp48 text-muted">access_time</i>
         <div class="align-text-top">
-          <span class="ml-3 font-weight-light">lundi 24 juin 2019</span><br>
-          <span class="ml-3 d-block mt-1 font-weight-light">10h30 à 13h00</span>
+          <span class="ml-3 font-weight-light">[lundi 24 juin 2019]</span><br>
+          <span class="ml-3 d-block mt-1 font-weight-light">[10h30 à 13h00]</span>
         </div>
       </div>
 
       <div class="d-flex mt-4">
         <i class="ml-3 material-icons dp48 text-muted">location_on</i>
         <div class="align-text-top">
-          <span class="ml-3 font-weight-light">21 Rue Claude Tillier</span><br>
-          <span class="ml-3 d-block mt-1 font-weight-light">75012 Paris, FRANCE</span>
+          <span class="ml-3 font-weight-light">[21 Rue Claude Tillier]</span><br>
+          <span class="ml-3 d-block mt-1 font-weight-light">[75012 Paris, FRANCE]</span>
         </div>
       </div>
 
@@ -141,9 +141,7 @@ navbar
 
 <!-- FOOTER -->
 <div class="bg-secondary pt-4 pb-4">
-  <div class="font-weight-light text-light">
-    <span class="mt-4 mb-4">
-      <center>La Conférence © 2018 - 2019 | Tous droits réservés.</center>
-    </span>
-  </div>
+  <p class="mt-3 mb-3 text-center font-weight-light text-light">
+    La Conférence © 2018 - 2019 | Tous droits réservés.
+  </p>
 </div>
