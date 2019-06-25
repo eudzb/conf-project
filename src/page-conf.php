@@ -1,6 +1,4 @@
-<!-- NAVBAR -->
-navbar
-  <!-- HEADER CONFERENCE -->
+<!-- HEADER CONFERENCE -->
 <div class="container mt-5">
   <div class="row shadow">
     <div class="col-md-8">
