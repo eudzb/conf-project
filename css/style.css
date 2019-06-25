@@ -7,8 +7,7 @@ html, body {
   min-height: 100%;
   margin: 0 auto -50px;
 }
-.footer,
-.push {
+.footer {
   height: 50px;
 }
 

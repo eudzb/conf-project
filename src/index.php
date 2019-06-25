@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <?php include './menu.php';?>
-    <div class="content">
+    <?php
+    include './menu.php';
+    include './page-conf.php';
+    ?>
 
-    </div>
   </body>
 
   <?php include './footer.php'; ?>
