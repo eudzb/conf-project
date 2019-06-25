@@ -8,8 +8,31 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
+    <nav class="navbar navbar-expand border-bottom p-4 fixed-top bg-dark shadow">
+	  	<h2 class="font-weight-light title-style">La Conférence</h2>
+	  	<ul class="navbar-nav ml-auto">
+	  		<li class="nav-item">
+          <a class="nav-link text-light font-weight-light pointer">Créer une conférence<a/>
+        </li>
+	  		<li class="nav-item">
+          <a class="nav-link text-light font-weight-light pointer">Se connecter<a/>
+        </li>
+	  		<li class="nav-item">
+          <a class="nav-link text-light font-weight-light pointer">S'inscire<a/>
+        </li>
+	  	</ul>
+	  </nav>
     <?php
     include 'page-conf.php';
     ?>
   </body>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="bg-dark pt-4 pb-4">
+      <p class="mt-3 mb-3 text-center font-weight-light text-light">
+        La Conférence © 2018 - 2019 | Tous droits réservés.
+      </p>
+    </div>
+  </footer>
 </html>

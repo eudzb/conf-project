@@ -1,3 +1,12 @@
+.title-style {
+  font-family: 'Aguafina Script', cursive;
+  color: #fedc72;
+}
+
+.up-space {
+  margin-top: 7rem;
+}
+
 .img-conf {
   object-fit: cover;
   width: inherit;
