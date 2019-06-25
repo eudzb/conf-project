@@ -1,6 +1,23 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.content {
+  padding: 20px;
+  min-height: 100%;
+  margin: 0 auto -50px;
+}
+.footer,
+.push {
+  height: 50px;
+}
+
+
+
 .title-style {
   font-family: 'Aguafina Script', cursive;
-  color: #fedc72;
+  color: #fedc72!important;
+  text-decoration: none!important;
 }
 
 .up-space {

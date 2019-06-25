@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
+    <?php include './menu.php'; ?>
+
     <!-- HEADER CONFERENCE -->
-    <div class="container mt-5">
+    <div class="container up-space content">
       <h2>Création d'une conférence</h2>
 
       <!-- MAIN BODY CREATION CONFERENCE -->
@@ -94,7 +96,7 @@
           class="form-control ml-2 mr-2"
           style="resize: none"></textarea>
         </div>
-        <div class="row">
+        <div class="row pb-5">
           <button
           type="button"
           name="enregister"
@@ -103,4 +105,5 @@
       </div>
     </div>
   </body>
+  <?php include './footer.php'; ?>
 </html>

@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="container mt-5">
+    <?php include './menu.php'; ?>
+
+
+    <div class="container up-space content">
       <div class="col-md-6 offset-md-3 mt-5 border rounded shadow pl-4 pr-4">
         <h3 class="text-center mt-5">S'inscrire</h3>
         <form autocomplete="off">
@@ -64,4 +67,5 @@
       </div>
     </div>
   </body>
+  <?php include './footer.php'; ?>
 </html>

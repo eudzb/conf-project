@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="container mt-5">
+    <?php include './menu.php'; ?>
+
+    <div class="container up-space content">
       <div class="col-md-6 offset-md-3 mt-5 border rounded shadow pl-4 pr-4">
         <h3 class="text-center mt-5">Se connecter</h3>
         <form>
@@ -26,10 +28,6 @@
             placeholder="Mot de passe"
             autocomplete="off">
           </div>
-          <div class="form-check ml-5 mr-5">
-            <input type="checkbox" class="form-check-input" id="condition">
-            <label class="form-check-label" for="condition">J'approuve les conditions d'utilisations</label>
-          </div>
             <button
             type="submit"
             class="btn btn-success mt-4 mb-5 col-md-4 offset-md-4">Connexion</button>
@@ -37,4 +35,5 @@
       </div>
     </div>
   </body>
+  <?php include './footer.php'; ?>
 </html>
