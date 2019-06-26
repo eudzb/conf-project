@@ -9,12 +9,9 @@
   </head>
   <body>
     <?php
-    include './menu.php';
     include './page-conf.php';
     ?>
 
   </body>
-
-  <?php include './footer.php'; ?>
 
 </html>

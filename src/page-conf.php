@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <?php include '../components/menu.php'; ?>
+    <?php include 'menu.php'; ?>
 
   <!-- HEADER CONFERENCE -->
-  <div class="container up-space content">
+  <div class="container up-space content mb-5">
     <div class="row shadow">
       <div class="col-md-8">
         <div class="mt-4 p-3">
@@ -149,6 +149,6 @@
     </div>
   </div>
 </body>
-<?php include '../components/footer.php'; ?>
+<?php include 'footer.php'; ?>
 
 </html>

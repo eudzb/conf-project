@@ -3,15 +3,12 @@ html, body {
   margin: 0;
 }
 .content {
-  padding: 20px;
   min-height: 100%;
   margin: 0 auto -50px;
 }
 .footer {
   height: 50px;
 }
-
-
 
 .title-style {
   font-family: 'Aguafina Script', cursive;
@@ -27,6 +24,20 @@ html, body {
   object-fit: cover;
   width: inherit;
   height: 18rem;
+}
+
+.img-conf-profil {
+  object-fit: cover;
+  width: inherit;
+  height: 9rem;
+}
+
+.event {
+  transition: box-shadow 0.3s;
+}
+
+.event:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
 .iframe-container{
