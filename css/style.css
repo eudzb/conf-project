@@ -23,7 +23,6 @@ html, body {
 .img-conf {
   object-fit: cover;
   width: inherit;
-  height: 18rem;
 }
 
 .side-marge{
@@ -75,6 +74,12 @@ html, body {
   cursor: pointer;
 }
 
+.conf-categ {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
 .onCategory {
   transition: 0.2s;
 }
@@ -82,4 +87,12 @@ html, body {
 .onCategory:hover {
   background-color: #343a40;
   color: #f8f9fa;
+}
+
+.vertical-super {
+  vertical-align: super;
+}
+
+.letter-space {
+  letter-spacing: 1.7px;
 }
