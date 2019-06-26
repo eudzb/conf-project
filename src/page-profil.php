@@ -70,11 +70,6 @@
           class="img-conf-profil mb-3">
           <span class="text-info font-weight-light ml-3">mer. 21 nov, 9h45</span>
           <h5 class="p-3">Nouveautés Angular 8+</h5>
-          <span class="pl-3 pr-3 pb-3 d-block">Retrouvez toutes les news à ne pas manquer […]</span>
-          <div class="d-block pl-3 pr-3 pb-3 d-flex align-items-start">
-             <i class="p48 text-muted material-icons">location_on</i>
-             <span class="font-weight-light align-self-center">21 Rue Claude Tillier - 75012 Paris</span>
-           </div>
           <button
           type="button"
           name="participer"
@@ -88,11 +83,6 @@
           class="img-conf-profil mb-3">
           <span class="text-info font-weight-light ml-3">mer. 21 nov, 9h45</span>
           <h5 class="p-3">Nouveautés Angular 8+</h5>
-          <span class="pl-3 pr-3 pb-3 d-block">Retrouvez toutes les news à ne pas manquer […]</span>
-          <div class="d-block pl-3 pr-3 pb-3 d-flex align-items-start">
-             <i class="p48 text-muted material-icons">location_on</i>
-             <span class="font-weight-light align-self-center">21 Rue Claude Tillier - 75012 Paris</span>
-           </div>
           <button
           type="button"
           name="participer"
@@ -106,11 +96,6 @@
           class="img-conf-profil mb-3">
           <span class="text-info font-weight-light ml-3">mer. 21 nov, 9h45</span>
           <h5 class="p-3">Nouveautés Angular 8+</h5>
-          <span class="pl-3 pr-3 pb-3 d-block">Retrouvez toutes les news à ne pas manquer […]</span>
-          <div class="d-block pl-3 pr-3 pb-3 d-flex align-items-start">
-             <i class="p48 text-muted material-icons">location_on</i>
-             <span class="font-weight-light align-self-center">21 Rue Claude Tillier - 75012 Paris</span>
-           </div>
           <button
           type="button"
           name="participer"
@@ -124,11 +109,6 @@
           class="img-conf-profil mb-3">
           <span class="text-info font-weight-light ml-3">mer. 21 nov, 9h45</span>
           <h5 class="p-3">Nouveautés Angular 8+</h5>
-          <span class="pl-3 pr-3 pb-3 d-block">Retrouvez toutes les news à ne pas manquer […]</span>
-          <div class="d-block pl-3 pr-3 pb-3 d-flex align-items-start">
-             <i class="p48 text-muted material-icons">location_on</i>
-             <span class="font-weight-light align-self-center">21 Rue Claude Tillier - 75012 Paris</span>
-           </div>
           <button
           type="button"
           name="participer"

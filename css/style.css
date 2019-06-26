@@ -26,6 +26,15 @@ html, body {
   height: 18rem;
 }
 
+.side-marge{
+  margin: 0 6rem;
+}
+
+.home-img {
+  object-fit: cover;
+  height: 34rem!important;
+}
+
 .img-conf-profil {
   object-fit: cover;
   width: inherit;
@@ -34,10 +43,14 @@ html, body {
 
 .event {
   transition: box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
 }
 
 .event:hover {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  color: inherit;
+  text-decoration: none;
 }
 
 .iframe-container{
@@ -60,4 +73,13 @@ html, body {
 
 .pointer {
   cursor: pointer;
+}
+
+.onCategory {
+  transition: 0.2s;
+}
+
+.onCategory:hover {
+  background-color: #343a40;
+  color: #f8f9fa;
 }

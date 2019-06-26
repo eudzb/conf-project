@@ -15,9 +15,10 @@
     <div class="row shadow">
       <div class="col-md-8">
         <div class="mt-4 p-3">
-          <span class="text-muted">[lundi 24 juin 2019]</span>
-          <h3>[Android Maker 2020]</h3>
-          <div class="d-flex align-items-center mt-2">
+          <!-- <span class="text-muted">[lundi 24 juin 2019]</span> -->
+          <h3 class="pb-2">[Android Maker 2020]</h3>
+          <span class="border rounded bg-danger text-light p-2 mt-3 mb-3">Technologie</span>
+          <div class="d-flex align-items-center mt-3">
             <img
             src="../img/mytho.png"
             alt="icon-user"
@@ -25,7 +26,7 @@
             style="height:40px; width:40px">
             <div class="ml-2 text-muted">
               Animé par
-              <a class="text-primary pointer">[Dousaï l'ancien]</a>
+              <a href="page-profil.php" class="text-primary pointer">[Dousaï l'ancien]</a>
             </div>
           </div>
         </div>
