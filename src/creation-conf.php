@@ -76,13 +76,27 @@
           </div>
         </div>
         <div class="row">
-          <h4 class="col mt-5 mb-4">Sélectionner l'adresse</h4>
+          <h4 class="col mt-5 mb-4">Ajouter une adresse</h4>
+        </div>
+        <div class="row mb-3">
+          <input
+          type="text"
+          name="adress"
+          placeholder="Saisissez l'adresse (ex: 21 rue Claude Tillier)"
+          class="form-control ml-2 mr-2">
+        </div>
+        <div class="row mb-3">
+          <input
+          type="text"
+          name="cp"
+          placeholder="Saisissez un code postal (ex: 75012)"
+          class="form-control ml-2 mr-2">
         </div>
         <div class="row">
           <input
           type="text"
-          name="adresse"
-          placeholder="Saisissez l'adresse"
+          name="city"
+          placeholder="Saisissez la ville (ex: Paris)"
           class="form-control ml-2 mr-2">
         </div>
         <div class="row">
