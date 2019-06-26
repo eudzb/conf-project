@@ -19,11 +19,9 @@
         <div class="row">
           <h4 class="col mt-5 mb-4">Choix du thème</h4>
         </div>
-        <div class="form-group row">
-        <label
-          for="choixTheme"
-          class="col">Sélectionner un thème</label>
-          <select class="form-control ml-2 mr-2" id="choixTheme">
+        <div class="form-group row p-3 align-items-baseline">
+        <label for="choixTheme">Sélectionner un thème</label>
+          <select class="form-control ml-4 mr-2 col-md-4" id="choixTheme">
             <option>Bonheur</option>
             <option>Cohesion d'équipe</option>
             <option>Conduite du changement</option>
@@ -37,38 +35,46 @@
           </select>
         </div>
         <div class="row">
-          <h4 class="col mt-5 mb-4">Quel titre voulez-vous donner à la conférence ?</h4>
+          <h4 class="col mt-3 mb-4">Quel titre voulez-vous donner à la conférence ?</h4>
         </div>
         <div class="row">
           <input
           type="text"
           name="titre"
           placeholder="Saisissez un titre (ex: Les nouveautés d'Angular 8)"
-          class="form-control ml-2 mr-2">
+          class="form-control ml-2 mr-2 col-md-6">
         </div>
         <div class="row">
           <h4 class="col mt-5 mb-4">Définissez la date et les horaires</h4>
         </div>
-        <div class="form-row">
-          <div class="col-md-4 p-0 mr-4">
+        <div class="form-row mb-3">
+          <div class="col-md-1 align-self-center mr-2">
+            <span>Début</span>
+          </div>
+          <div class="col-md-3 p-0 mr-2">
             <input
             type="date"
             name="date"
             class="form-control">
           </div>
-          <div class="col-md-1 align-self-center text-right mr-2">
-            <span>Début</span>
-          </div>
-          <div class="col-md">
+          <div class="col-md-2">
             <input
             type="time"
             name="start"
             class="form-control">
           </div>
-          <div class="col-md-1 align-self-center text-right mr-2">
+        </div>
+        <div class="form-row">
+          <div class="col-md-1 align-self-center mr-2">
             <span>Fin</span>
           </div>
-          <div class="col-md">
+          <div class="col-md-3 p-0 mr-2">
+            <input
+            type="date"
+            name="date"
+            class="form-control">
+          </div>
+          <div class="col-md-2">
             <input
             type="time"
             name="end"
@@ -83,21 +89,21 @@
           type="text"
           name="adress"
           placeholder="Saisissez l'adresse (ex: 21 rue Claude Tillier)"
-          class="form-control ml-2 mr-2">
+          class="form-control ml-2 mr-2 col-md-6">
         </div>
         <div class="row mb-3">
           <input
           type="text"
           name="cp"
           placeholder="Saisissez un code postal (ex: 75012)"
-          class="form-control ml-2 mr-2">
+          class="form-control ml-2 mr-2 col-md-6">
         </div>
         <div class="row">
           <input
           type="text"
           name="city"
           placeholder="Saisissez la ville (ex: Paris)"
-          class="form-control ml-2 mr-2">
+          class="form-control ml-2 mr-2 col-md-6">
         </div>
         <div class="row">
           <h4 class="col mt-5 mb-4">Une brève description</h4>

@@ -16,7 +16,14 @@
       <div class="row">
 
         <div class="col-md-8 mt-5">
-          <h3>Les conférences</h3>
+          <div class="d-flex align-items-center justify-content-between">
+            <h3>Les conférences</h3>
+            <div class="ml-auto">
+              <span class="text-muted m-2 pointer"><u>Toutes</u></span>
+              <span class="text-muted m-2 pointer">Votés</span>
+              <span class="text-muted m-2 pointer">Non votés</span>
+            </div>
+          </div>
           <div class="row">
             <a href="page-conf.php" class="col-md-4 rounded m-4 shadow-sm h-25 p-0 pointer event">
               <div class="position-relative w-100 mb-3">
@@ -121,13 +128,6 @@
               </div>
               <span class="text-info font-weight-light ml-3">mer. 21 nov, 9h45</span>
               <h5 class="p-3 mb-0">Nouveautés Angular 8+</h5>
-              <span class="d-block pl-3 pr-3 mb-2">
-                <i class="text-warning material-icons dp48">star</i>
-                <i class="text-warning material-icons dp48">star</i>
-                <i class="text-warning material-icons dp48">star</i>
-                <i class="text-warning material-icons dp48">star_half</i>
-                <i class="text-warning material-icons dp48">star_border</i>
-              </span>
               <div class="d-block pl-3 pr-3 pb-3 d-flex align-items-start">
                  <i class="p48 text-muted material-icons">location_on</i>
                  <span class="font-weight-light align-self-center">21 Rue Claude Tillier - 75012 Paris</span>
