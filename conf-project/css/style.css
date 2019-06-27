@@ -1,0 +1,83 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.content {
+  padding: 20px;
+  min-height: 100%;
+  margin: 0 auto -50px;
+}
+.footer,
+.push {
+  height: 50px;
+}
+
+<<<<<<< HEAD
+.home-img {
+  object-fit: cover;
+  height: 34rem!important;
+}
+
+.title-style {
+  font-family: 'Aguafina Script', cursive;
+  color: #fedc72!important;
+  text-decoration: none!important;
+}
+
+.up-space {
+  margin-top: 7rem;
+}
+
+.img-conf {
+  object-fit: cover;
+  width: inherit;
+  height: 18rem;
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+li:hover{
+  background-color: grey;
+}
+
+.text-sh{
+  /*text-shadow: 4px 3px 20px darkgrey;*/
+text-shadow: 0 0 0.5em black;
+}
+
+.img-conf-profil {
+  object-fit: cover;
+  width: inherit;
+  height: 9rem;
+}
+.side-marge{
+  margin: 0 6rem;
+}
+
+.event {
+  transition: box-shadow 0.3s;
+}
+
+.event:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
