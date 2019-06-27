@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 //function pageConference ($idConf){
 try
@@ -10,51 +10,81 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-$idConf = 1;
-// Titre, description, date, heure de début/fin, adresse, code postale, ville, nom de l'intervenant 
-
-$conferenceInfos = $bdd->query("
-  SELECT conference.id, conference.title, conference.description, date_format(dateStart, '%d-%m-%Y') as la_date_a_afficher , 
-  conference.dateStart, conference.dateEnd, conference.adress, conference.cp, conference.city, conference.logo, 
+//$idConf = 6;
+// Titre, description, date, heure de début/fin, adresse, code postale, ville, nom de l'intervenant
+$home = $bdd->query("
+  SELECT conference.id, conference.title, conference.description, date_format(dateStart, '%d-%m-%Y') as la_date_a_afficher ,
+  conference.dateStart, conference.dateEnd, conference.adress, conference.cp, conference.city, conference.logo,
   user.firstName, user.img,
-  category.category_name as category
-  FROM user, conference, category 
-  WHERE conference.user_id = user.id
-  AND conference.category_id = category.id 
-  AND conference.id =$idConf");
-$row = $conferenceInfos->fetchAll();
-//echo $row[0]['category'];
-$imgConf = 'data: image.jpeg;base64,'. $row[0]['logo'];
-$imgPseudo = 'data: image.jpeg;base64,'. $row[0]['img'];
-//print_r($row);
+  category.category_name as category, category.id as categoryId 
+  FROM user, conference, category
+  WHERE conference.user_id = user.id    
+  AND conference.category_id = category.id"
+);
+$homeConf = $home->fetchAll();
+$dd =  $homeConf[0]['id'];
 
-$participantInfos = $bdd->query("
-  SELECT COUNT(id_conference) as attendees 
-  FROM attendees 
-  WHERE id_conference =$idConf");
-$nbParticipant = $participantInfos->fetchAll();
+$test = $bdd->query("
+  SELECT id_conference, AVG(Note) as note
+  FROM vote 
+  GROUP BY id_conference
+  ");
+$testt= $test->fetchAll();
+var_dump($testt);
+$v = $testt[0]['note'];
 
+  foreach($homeConf as $key ) {
+      $homeConf[] = array('Note' => $v);
+  }
 
-
-$conferenceInfos = $bdd->query("SELECT user.firstName, user.id, user.img, user.pseudo
-  FROM attendees, user 
-  WHERE attendees.id_user = user.id
-  AND id_conference =$idConf");
-$participant = $conferenceInfos->fetchAll();
+var_dump($homeConf);
 
 
 
+$participantInfos2 = $bdd->query("
+  SELECT COUNT(id_conference) as attendees
+  FROM attendees
+  WHERE id_conference =$dd");
+$nbParticipant2 = $participantInfos2->fetchAll();
 
+$category = $bdd->query("SELECT * 
+  FROM category 
+  ORDER BY category_name");
+$categoryConf = $category->fetchAll();
+
+
+
+
+
+$moyenne = $bdd->query("
+  SELECT id_conference, Note 
+  FROM vote 
+  WHERE id_conference = 6
+  ");
+$moyenneConf = $moyenne->fetchAll();
+
+var_dump(array_filter($moyenneConf, function($key) {
+  return $key == "Note"; 
+}, ARRAY_FILTER_USE_KEY 
+));
+
+$totalVote = array_sum(array_map(function($ar) {
+  return $ar['Note'];
+  ;
+}, $moyenneConf));
+
+ 
+$moyenneVote = round($totalVote / sizeof($moyenneConf), 1);
+
+
+
+
+function maDate($la_date_a_afficher = NULL){
 //DATE
-$dateFirst = date('G:i', strtotime($row[0]['dateStart']));
-$dateStart = str_replace(":", "h", $dateFirst);
 
-$dateSecond = date('G:i', strtotime($row[0]['dateEnd']));
-$dateEnd = str_replace(":", "h", $dateSecond);
-
-$date = new DateTime($row[0]['la_date_a_afficher']);
-$nom_jour_fr = array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi");
-$mois_fr = Array("", "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", 
-        "septembre", "octobre", "novembre", "décembre");
+$date = new DateTime($la_date_a_afficher);
+$nom_jour_fr = array("dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam.");
+$mois_fr = Array("", "jan", "fév", "mar", "avr", "mai", "jun", "jui", "août",
+        "sept", "oct", "nov", "déc");
 list($nom_jour, $jour, $mois, $annee) = explode('-', $date->format('w-d-n-Y'));
-
+echo  $nom_jour_fr[$nom_jour].' '.$jour.' '.$mois_fr[$mois].' '.$annee;}
