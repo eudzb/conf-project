@@ -23,7 +23,7 @@
       href="./creation-conf.php"
       >Créer une conférence<a/>
     </li>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0" action="page-recherche.php">
       <input
       class="form-control mr-sm-2"
       style="width: 30rem;"
@@ -33,17 +33,17 @@
     </form>
   </ul>
   <ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a
+    class="nav-link text-light font-weight-light pointer letter-space"
+    href="./page-inscription.php"
+    >S'inscrire<a/>
+  </li>
     <li class="nav-item">
       <a
       class="nav-link text-light font-weight-light pointer letter-space"
       href="./page-connexion.php"
       >Se connecter<a/>
-    </li>
-    <li class="nav-item">
-      <a
-      class="nav-link text-light font-weight-light pointer letter-space"
-      href="./page-inscription.php"
-      >S'inscrire<a/>
     </li>
   </ul>
 </nav>

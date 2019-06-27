@@ -10,6 +10,10 @@ html, body {
   height: 50px;
 }
 
+.gold-color {
+  color: #fedc72!important;
+}
+
 .title-style {
   font-family: 'Aguafina Script', cursive;
   color: #fedc72!important;
@@ -95,4 +99,73 @@ html, body {
 
 .letter-space {
   letter-spacing: 1.7px;
+}
+
+/* RATING STARS */
+
+@import "compass/css3";
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  * {
+    font-size: 1rem;
+  }
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  & > input {
+    display: none;
+    & + label {
+      /* only enough room for the star */
+      display: inline-block;
+      overflow: hidden;
+      text-indent: 9999px;
+      width: 1em;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: '\2606';
+        color: #888;
+      }
+    }
+    &:checked ~ label:before,
+      & + label:hover ~ label:before,
+      & + label:hover:before {
+      content: '\2605';
+      color: #e52;
+      text-shadow: 0 0 1px #333;
+    }
+  }
+
+  /* the hidden clearer */
+  & > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+  }
+  & > .star-cb-clear + label:before {
+    width: .5em;
+  }
+
+  &:hover > input + label:before {
+    content: '\2606';
+    color: #888;
+    text-shadow: none;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: '\2605';
+    color: #e52;
+    text-shadow: 0 0 1px #333;
+  }
+}
+
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: transparent;
 }

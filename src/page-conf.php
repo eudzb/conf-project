@@ -14,6 +14,7 @@ if ((include 'code.php') == TRUE) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../rating.js"></script>
   </head>
   <body>
     <?php include 'menu.php'; ?>
@@ -28,11 +29,13 @@ if ((include 'code.php') == TRUE) {
           </h3>
           <span class="border rounded bg-danger text-light p-2 mt-3 mb-3">Technologie</span>
           <div class="d-flex align-items-center mt-3">
-            <?php
-              echo '<img src="'.$imgPseudo.'" class="rounded-circle pointer p-1" alt="participant-icon" style="height:50px; width:50px">';
-            ?>
+            <a href="page-profil.php">
+              <?php
+                echo '<img src="'.$imgPseudo.'" class="rounded-circle pointer p-1" alt="participant-icon" style="height:50px; width:50px">';
+              ?>
+            </a>
             <div class="ml-2 text-muted">
-              Animé par
+              Présenté par
               <a href="page-profil.php" class="text-primary pointer">
                 <?php
                   echo $row[0]['firstName'];
@@ -75,6 +78,55 @@ if ((include 'code.php') == TRUE) {
             <?php echo $row[0]['description']; ?>
           </p>
         </div>
+        <h5 class="mt-5 mb-3">Donnez-nous votre avis :)</h5><span class="d-block mt-2">
+          <div class="align-items-center">
+            <!-- <input type="radio" class="mr-3" value="0">
+            <input type="radio" class="mr-3" value="1">
+            <input type="radio" class="mr-3" value="2">
+            <input type="radio" class="mr-3" value="3">
+            <input type="radio" class="mr-3" value="4">
+            <input type="radio" class="mr-3" value="5"> -->
+            <!-- <form>
+              <label for="rating-5"></label>
+              <input type="radio" id="rating-5" name="rating" value="5" />
+              <label for="rating-4"></label>
+              <input type="radio" id="rating-4" name="rating" value="4" checked="checked" />
+              <label for="rating-3"></label>
+              <input type="radio" id="rating-3" name="rating" value="3" />
+              <label for="rating-2"></label>
+              <input type="radio" id="rating-2" name="rating" value="2" />
+              <label for="rating-1"></label>
+              <input type="radio" id="rating-1" name="rating" value="1" />
+              <label for="rating-0"></label>
+              <input type="radio" id="rating-0" name="rating" value="0" />
+            </form> -->
+
+            <form>
+              <fieldset>
+                <span class="star-cb-group">
+                <input type="radio" id="rating-5" name="rating" value="5"><label for="rating-5">5</label>
+                <input type="radio" id="rating-4" name="rating" value="4" checked="checked"><label for="rating-4">4</label>
+                <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3">3</label>
+                <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2">2</label>
+                <input type="radio" id="rating-1" name="rating" value="1"><label for="rating-1">1</label>
+                <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear"><label for="rating-0">0</label>
+                </span>
+              </fieldset>
+            </form>
+
+
+            <script id="rendered-js">
+            var logID = 'log',
+            log = $('<div id="' + logID + '"></div>');
+            $('body').append(log);
+            $('[type*="radio"]').change(function () {
+              var me = $(this);
+              log.html(me.attr('value'));
+            });
+            </script>
+            <div id="log"></div>
+          </div>
+
       </div>
 
       <div class="col-md-4 offset-md-1">
