@@ -1,9 +1,13 @@
 <?php
 // Fonctionne
-if ((include 'code.php') == TRUE) {
-    echo 'OK';
-}
+include 'code_index.php';
 
+$refId = $row[0]['idOrganisateur']; // id de l'organisateur de la conférence
+$conf = $_GET['idConference'];
+/*var_dump($row[0]); // id de la conférence */
+
+/*$ee = $conferenceInfos[0]['$conf'];
+var_dump($ee);*/
 ?>
 
 <!DOCTYPE html>
@@ -14,10 +18,9 @@ if ((include 'code.php') == TRUE) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../rating.js"></script>
   </head>
   <body>
-    <?php include 'menu.php'; ?>
+     <?php include 'menu.php'; ?>
 
   <!-- HEADER CONFERENCE -->
   <div class="container up-space content mb-5">
@@ -27,17 +30,15 @@ if ((include 'code.php') == TRUE) {
           <h3 class="pb-2">
             <?php echo $row[0]['title']; ?>
           </h3>
-          <span class="border rounded bg-danger text-light p-2 mt-3 mb-3">Technologie</span>
+          <span class="border rounded bg-danger text-light p-2 mt-3 mb-3"> <?php echo $row[0]['category']; ?></span>
           <div class="d-flex align-items-center mt-3">
-            <a href="page-profil.php">
-              <?php
-                echo '<img src="'.$imgPseudo.'" class="rounded-circle pointer p-1" alt="participant-icon" style="height:50px; width:50px">';
-              ?>
-            </a>
+            <?php
+              echo '<img src="'.$imgPseudo.'" class="rounded-circle pointer p-1" alt="participant-icon" style="height:50px; width:50px">';
+            ?>
             <div class="ml-2 text-muted">
-              Présenté par
-              <a href="page-profil.php" class="text-primary pointer">
-                <?php
+              Animé par
+              <?php echo '<a href="page-profil.php?id='.$refId.'" class="text-primary pointer">';
+
                   echo $row[0]['firstName'];
                 ?>
               </a>
@@ -78,55 +79,6 @@ if ((include 'code.php') == TRUE) {
             <?php echo $row[0]['description']; ?>
           </p>
         </div>
-        <h5 class="mt-5 mb-3">Donnez-nous votre avis :)</h5><span class="d-block mt-2">
-          <div class="align-items-center">
-            <!-- <input type="radio" class="mr-3" value="0">
-            <input type="radio" class="mr-3" value="1">
-            <input type="radio" class="mr-3" value="2">
-            <input type="radio" class="mr-3" value="3">
-            <input type="radio" class="mr-3" value="4">
-            <input type="radio" class="mr-3" value="5"> -->
-            <!-- <form>
-              <label for="rating-5"></label>
-              <input type="radio" id="rating-5" name="rating" value="5" />
-              <label for="rating-4"></label>
-              <input type="radio" id="rating-4" name="rating" value="4" checked="checked" />
-              <label for="rating-3"></label>
-              <input type="radio" id="rating-3" name="rating" value="3" />
-              <label for="rating-2"></label>
-              <input type="radio" id="rating-2" name="rating" value="2" />
-              <label for="rating-1"></label>
-              <input type="radio" id="rating-1" name="rating" value="1" />
-              <label for="rating-0"></label>
-              <input type="radio" id="rating-0" name="rating" value="0" />
-            </form> -->
-
-            <form>
-              <fieldset>
-                <span class="star-cb-group">
-                <input type="radio" id="rating-5" name="rating" value="5"><label for="rating-5">5</label>
-                <input type="radio" id="rating-4" name="rating" value="4" checked="checked"><label for="rating-4">4</label>
-                <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3">3</label>
-                <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2">2</label>
-                <input type="radio" id="rating-1" name="rating" value="1"><label for="rating-1">1</label>
-                <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear"><label for="rating-0">0</label>
-                </span>
-              </fieldset>
-            </form>
-
-
-            <script id="rendered-js">
-            var logID = 'log',
-            log = $('<div id="' + logID + '"></div>');
-            $('body').append(log);
-            $('[type*="radio"]').change(function () {
-              var me = $(this);
-              log.html(me.attr('value'));
-            });
-            </script>
-            <div id="log"></div>
-          </div>
-
       </div>
 
       <div class="col-md-4 offset-md-1">
@@ -135,7 +87,7 @@ if ((include 'code.php') == TRUE) {
           <div class="align-text-top">
             <span class="ml-3 font-weight-light">
               <?php
-                echo $nom_jour_fr[$nom_jour].' '.$jour.' '.$mois_fr[$mois].' '.$annee;
+              maDate($row[0]['dateStart'], $row[0]['dateEnd'], $row[0]['la_date_a_afficher']);
               ?>
             </span><br>
             <span class="ml-3 d-block mt-1 font-weight-light">
@@ -171,8 +123,8 @@ if ((include 'code.php') == TRUE) {
           <?php
           $i = 0;
           foreach($participant as $key ) {
-            $a = $participant[$i]['img'];
             $c = $participant[$i]['id'];
+            $a = $participant[$i]['img'];
             $src = 'data: image.jpeg;base64,'. $a;
           ?>
           <div class="col-auto">

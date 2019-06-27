@@ -1,5 +1,5 @@
 <?php
-	include "code.php";
+	include 'code.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +21,13 @@
 	  <table class="table table-striped mb-5">
 	    <thead>
 	      <tr>
-	        <th>Icon</th>
-	        <th>Nom</th>
-	        <th>Prénom</th>
-	        <th>Email</th>
-	        <th>Pseudo</th>
-	        <th>Admin</th>
-	        <th>Action</th>
+	        <th class="m-auto">Icon</th>
+	        <th class="m-auto">Nom</th>
+	        <th class="m-auto">Prénom</th>
+	        <th class="m-auto">Email</th>
+	        <th class="m-auto">Pseudo</th>
+	        <th class="m-auto">Admin</th>
+	        <th class="m-auto">Action</th>
 	      </tr>
 	    </thead>
 	    <tbody><?php $i = 0;
@@ -47,7 +47,8 @@
 	        <td class="align-middle"><?php echo $participant[$i]['pseudo'] ?></td>
 	        <td class="align-middle">0</td>
 	        <td class="align-middle">
-	        		<a href="delete.php?id=<?php echo  $participant[$i]['id']?>" class="btn btn-danger" onClick="return checkMe(), alert('Utilisateur Supprimé !')">Supprimer
+	        		<a href="delete.php?id=<?php echo  $participant[$i]['id']?>" onClick="return checkMe(), alert('Utilisateur Supprimé !')">
+								<i class="large material-icons dp48 text-danger">delete</i>
 	        		</a>
 	        </td>
 	      </tr>
@@ -71,19 +72,19 @@
 	    </thead>
 	    <tbody>
 	    	<?php $i = 0;
-	      	 foreach ($row as $key ) {
+	      	 foreach ($homeConf as $key ) {
 	      	 ?>
 	      <tr>
-	        <td class="align-middle"><?php echo $row[$i]['title'] ?></td>
-	        <td class="align-middle"><?php echo $row[$i]['firstName'] ?></td>
-	        <td class="align-middle"><?php echo $row[$i]['la_date_a_afficher'] ?></td>
+	        <td class="align-middle"><?php echo $homeConf[$i]['title'] ?></td>
+	        <td class="align-middle"><?php echo $homeConf[$i]['firstName'] ?></td>
+	        <td class="align-middle"><?php echo $homeConf[$i]['la_date_a_afficher'] ?></td>
 	        <td class="align-middle"><?php echo "De ".$dateStart." à ".$dateEnd ?></td>
-	        <td class="align-middle"><?php echo $row[$i]['description'] ?></td>
-	        <td class="align-middle"><?php echo $row[$i]['adress'] ?></td>
-	        <td class="align-middle"><?php echo $row[$i]['city'] ?></td>
+	        <td class="align-middle"><?php echo $homeConf[$i]['description'] ?></td>
+	        <td class="align-middle"><?php echo $homeConf[$i]['adress'] ?></td>
+	        <td class="align-middle"><?php echo $homeConf[$i]['city'] ?></td>
 	        <td class="align-middle"><a href="" class="btn btn-danger">Supprimer</a></td>
 	      </tr>
-	       <?php $i++ ; }?>
+	       <?php $i++ ; } ?>
 	   </tbody>
 	  </table>
 	</div>
