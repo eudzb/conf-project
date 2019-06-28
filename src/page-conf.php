@@ -129,7 +129,7 @@ var_dump($ee);*/
           ?>
           <div class="col-auto">
             <?php
-            echo '<img src="'.$src.'" class="rounded-circle pointer p-1" alt="participant-icon" style="height:80px; width:80px">'; ?>
+            echo '<a href="page-profil.php?id=' . $c . '"><img src="'.$src.'" class="rounded-circle pointer p-1" alt="participant-icon" style="height:80px; width:80px"></a>'; ?>
           </div>
 
         <?php $i++; } ?>

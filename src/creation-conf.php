@@ -1,3 +1,11 @@
+<?php
+session_start();
+include 'code-creation-conf.php';
+
+if(empty($_SESSION['id'])) {
+  header('Location: page-connexion.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -15,23 +23,25 @@
       <h2>Création d'une conférence</h2>
 
       <!-- MAIN BODY CREATION CONFERENCE -->
+      <form method="post" action="code-creation-conf.php">
+
       <div class="mt-2 mb-5">
         <div class="row">
-          <h4 class="col mt-5 mb-4">Choix du thème</h4>
+          <h4 class="col mt-5 mb-4">Choix de la catégorie</h4>
         </div>
         <div class="form-group row p-3 align-items-baseline">
-        <label for="choixTheme">Sélectionner un thème</label>
-          <select class="form-control ml-4 mr-2 col-md-4" id="choixTheme">
-            <option>Bonheur</option>
-            <option>Cohesion d'équipe</option>
-            <option>Conduite du changement</option>
-            <option>Dépassement de soi</option>
-            <option>Digital / Technologie</option>
-            <option>Innovation</option>
-            <option>Management / Leadership</option>
-            <option>Motivation</option>
-            <option>Performance</option>
-            <option>Prise de risque</option>
+        <label for="choixCategorie">Sélectionner une catégorie</label>
+          <select
+          name="category"
+          class="form-control ml-4 mr-2 col-md-4"
+          id="choixCategorie">
+            <?php
+            $i = 0;
+            foreach ($result as $key) {
+              echo '<option>' . $result[$i]['category_name'] . '</option> </br>';
+              $i++;
+            }
+            ?>
           </select>
         </div>
         <div class="row">
@@ -39,6 +49,7 @@
         </div>
         <div class="row">
           <input
+          name="title"
           type="text"
           name="titre"
           placeholder="Saisissez un titre (ex: Les nouveautés d'Angular 8)"
@@ -53,12 +64,14 @@
           </div>
           <div class="col-md-3 p-0 mr-2">
             <input
+            name="startDate"
             type="date"
             name="date"
             class="form-control">
           </div>
           <div class="col-md-2">
             <input
+            name="startTime"
             type="time"
             name="start"
             class="form-control">
@@ -70,12 +83,14 @@
           </div>
           <div class="col-md-3 p-0 mr-2">
             <input
+            name="endDate"
             type="date"
             name="date"
             class="form-control">
           </div>
           <div class="col-md-2">
             <input
+            name="endTime"
             type="time"
             name="end"
             class="form-control">
@@ -86,6 +101,7 @@
         </div>
         <div class="row mb-3">
           <input
+          name="address"
           type="text"
           name="adress"
           placeholder="Saisissez l'adresse (ex: 21 rue Claude Tillier)"
@@ -93,6 +109,7 @@
         </div>
         <div class="row mb-3">
           <input
+          name="cp"
           type="text"
           name="cp"
           placeholder="Saisissez un code postal (ex: 75012)"
@@ -100,6 +117,7 @@
         </div>
         <div class="row">
           <input
+          name="city"
           type="text"
           name="city"
           placeholder="Saisissez la ville (ex: Paris)"
@@ -118,11 +136,12 @@
         </div>
         <div class="row pb-5">
           <button
-          type="button"
+          type="submit"
           name="enregister"
           class="btn btn-primary ml-2 mr-2 mt-4">Enregistrer</button>
         </div>
       </div>
+    </form>
     </div>
   </body>
   <?php include './footer.php'; ?>

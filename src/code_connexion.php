@@ -10,10 +10,10 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
 
   if ($newUser = $newUser->fetch()) {
     session_start();
-    $id = $newUser['id'];
-    $_SESSION['id'] = $id;
+    $_SESSION['id'] = $newUser['id'];
+    $_SESSION['status'] = $newUser['status'];
 
-    header('Location:page-profil.php?id='.$id);
+    header('Location:page-profil.php?id='.$_SESSION['id']);
   }
     else {
       header('Location:page-connexion.php');
