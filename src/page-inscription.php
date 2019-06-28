@@ -9,13 +9,19 @@
   </head>
   <body>
     <?php include './menu.php'; ?>
-
-
     <div class="container up-space content">
       <div class="col-md-6 offset-md-3 mt-5 border rounded shadow pl-4 pr-4">
         <h3 class="text-center mt-5">S'inscrire</h3>
-        <form autocomplete="off">
+        <form autocomplete="off" action="code_inscription.php" method="POST">
           <div class="form-group mt-5 ml-5 mr-5">
+            <input
+            type="text"
+            name="pseudo"
+            class="form-control"
+            placeholder="Pseudo"
+            autocomplete="off">
+          </div>
+          <div class="form-group ml-5 mr-5">
             <input
             type="text"
             name="nom"
@@ -42,6 +48,7 @@
           <div class="form-group ml-5 mr-5">
             <input
             type="password"
+            name="mot_de_passe"
             class="form-control"
             placeholder="Mot de passe"
             autocomplete="off">
@@ -49,6 +56,7 @@
           <div class="form-group ml-5 mr-5">
             <input
             type="password"
+            name="mot_de_passe2"
             class="form-control"
             placeholder="Confirmer le mot de passe"
             autocomplete="off">
@@ -68,4 +76,3 @@
     </div>
   </body>
   <?php include './footer.php'; ?>
-</html>

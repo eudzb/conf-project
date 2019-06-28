@@ -17,17 +17,15 @@ include'connexionbdd.php';
                 "email" => $email,
                 "password" => $password
                 ));
-    
    if ($newUser = $newUser->fetch())
    {
     echo "Il existe";
     $a = $newUser['id'];
-/*    $donnee = $newUser ->fetchAll();*/
-    /*$a = $donnee[0]['id'];*/
-    //	echo $a;
    header('Location:page-profil.php?id='.$a);
    }
    else
    {
     header('Location:page-connexion.php');   
    }
+
+  

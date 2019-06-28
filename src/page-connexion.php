@@ -15,7 +15,7 @@ include'code.php';
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <?php include './menu.php'; ?>
+  <?php include './menu.php'; ?>
  
     <div class="container up-space content">
       <div class="col-md-6 offset-md-3 mt-5 border rounded shadow pl-4 pr-4">
