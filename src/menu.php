@@ -23,8 +23,12 @@
       href="./creation-conf.php"
       >Créer une conférence<a/>
     </li>
-    <form class="form-inline my-2 my-lg-0" action="page-recherche.php">
+    <form
+    class="form-inline my-2 my-lg-0"
+    action="page-recherche.php"
+    method="get">
       <input
+      name="query"
       class="form-control mr-sm-2"
       style="width: 30rem;"
       type="search"

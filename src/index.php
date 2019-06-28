@@ -17,9 +17,15 @@ include 'code.php';
     <img src="../img/imgConf.jpg" class="w-100 home-img">
     <div class="content side-marge">
       <div class="row">
-
-        <div class="col-md-10 mt-5">
-          <h3>Les conférences</h3>
+        <div class="col-md-9 mt-5">
+          <div class="d-flex align-items-center justify-content-between">
+            <h3>Les conférences</h3>
+            <div class="ml-auto">
+              <span class="text-muted m-2 pointer"><u>Toutes</u></span>
+              <span class="text-muted m-2 pointer">Votés</span>
+              <span class="text-muted m-2 pointer">Non votés</span>
+            </div>
+          </div>
           <div class="row">
 
           <?php
@@ -85,7 +91,7 @@ include 'code.php';
           </div>
         </div>
 
-        <div class="col-md-2 border-left mt-5 mb-5 pr-0">
+        <div class="col-md-3 border-left mt-5 mb-5 pr-2 pl-4">
           <h3 class="ml-3">Catégories</h3>
           <ul class="list-group ml-2 mt-4 shadow-sm">
       <?php

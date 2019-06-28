@@ -27,18 +27,12 @@ $test = $bdd->query("
   FROM vote
   GROUP BY id_conference
   ");
-$testt= $test->fetchAll();
-$v = $testt[0]['note'];
 
 //DATE
 $dateFirst = date('G:i', strtotime($homeConf[0]['dateStart']));
 $dateStart = str_replace(":", "h", $dateFirst);
 $dateSecond = date('G:i', strtotime($homeConf[0]['dateEnd']));
 $dateEnd = str_replace(":", "h", $dateSecond);
-
-  // foreach($homeConf as $key ) {
-  //     $homeConf[] = array('Note' => $v);
-  // }
 
 $conferenceInfos = $bdd->query("
   SELECT *
