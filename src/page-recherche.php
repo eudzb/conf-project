@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'code-recherche.php';
 ?>
 <!DOCTYPE html>

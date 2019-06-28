@@ -1,14 +1,6 @@
 <?php
 
-//function pageConference ($idConf){
-try
-{
-  $bdd = new PDO('mysql:host=localhost;dbname=bdd-conf;charset=utf8', 'root', 'root');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+include'connexionbdd.php';
 
 $home = $bdd->query("
   SELECT conference.id, conference.title, conference.description, date_format(dateStart, '%d-%m-%Y') as la_date_a_afficher ,

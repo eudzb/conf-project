@@ -1,5 +1,6 @@
 <?php
-	include 'code.php';
+session_start();
+include 'code.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
 </head>
 <body>
  <?php include 'menu.php';?>
-    <div class="content container up-space">
+    <div class="content container up-space mb-4">
     	<h1 class="mb-5 text-center">ADMINISTRATEUR</h1>
       <h3 class="mb-3">Utilisateurs</h3>
 	  <table class="table table-striped mb-5">

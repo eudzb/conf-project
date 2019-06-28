@@ -1,12 +1,6 @@
 <?php
-try
-{
-  $bdd = new PDO('mysql:host=localhost;dbname=bdd-conf;charset=utf8', 'root', 'root');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+include'connexionbdd.php';
+
 ini_set('display_errors', 1);
 $query = $_GET['query'];
 // $min_length = 3;

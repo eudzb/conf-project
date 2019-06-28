@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include 'code_profil.php';
 ?>
 <!DOCTYPE html>
@@ -35,7 +37,6 @@ include 'code_profil.php';
         </div>
         <div class="col-md-4">
           <div class="mt-4 p-3">
-            <i class="fab fa-facebook-square"></i>
 
             <!-- <div class="d-flex align-items-center">
               <i class="p48 text-muted material-icons">location_on</i>

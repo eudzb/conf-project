@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <nav class="navbar navbar-expand-xl p-4 fixed-top bg-dark shadow">
   <h2>
     <a href="./index.php" class="font-weight-light title-style">La Conférence</a>
@@ -37,17 +40,34 @@
     </form>
   </ul>
   <ul class="navbar-nav ml-auto">
-  <li class="nav-item">
-    <a
-    class="nav-link text-light font-weight-light pointer letter-space"
-    href="./page-inscription.php"
-    >S'inscrire<a/>
-  </li>
+    <?php
+    if(isset($_SESSION['id'])) {
+    ?>
+    <li class="nav-item">
+      <a
+      class="nav-link text-light font-weight-light pointer letter-space"
+      href="./page-profil.php?id=<?php echo $_SESSION['id'] ?>"
+      >Profil<a/>
+    </li>
+    <li class="nav-item">
+      <a
+      class="nav-link text-light font-weight-light pointer letter-space"
+      href="./deconnexion.php"
+      >Déconnexion<a/>
+    </li>
+    <?php } else { ?>
     <li class="nav-item">
       <a
       class="nav-link text-light font-weight-light pointer letter-space"
       href="./page-connexion.php"
       >Se connecter<a/>
     </li>
+    <li class="nav-item">
+      <a
+      class="nav-link text-light font-weight-light pointer letter-space"
+      href="./page-inscription.php"
+      >S'inscrire<a/>
+    </li>
+    <?php } ?>
   </ul>
 </nav>

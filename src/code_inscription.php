@@ -3,14 +3,9 @@
 if ((include 'code.php') == TRUE) {
 
 }
-try
-{
-  $bdd = new PDO('mysql:host=localhost;dbname=bdd-conf;charset=utf8', 'root', 'root');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+
+include'connexionbdd.php';
+
 $pseudo = $_GET['pseudo'];
 $prenom = $_GET['prenom'];
 $nom = $_GET['nom'];

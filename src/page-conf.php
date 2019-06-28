@@ -1,5 +1,5 @@
 <?php
-// Fonctionne
+session_start();
 include 'code_index.php';
 
 $refId = $row[0]['idOrganisateur']; // id de l'organisateur de la conférence
