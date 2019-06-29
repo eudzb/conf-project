@@ -1,3 +1,7 @@
+<?php 
+include 'code_inscription.php';
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,7 +16,15 @@
     <div class="container up-space content">
       <div class="col-md-6 offset-md-3 mt-5 border rounded shadow pl-4 pr-4">
         <h3 class="text-center mt-5">S'inscrire</h3>
-        <form autocomplete="off" action="code_inscription.php" method="POST">
+        <form autocomplete="off" action="" method="POST">
+          <?php
+            if (isset($erreur))
+            {
+                echo $erreur ;
+            }else {
+                echo '';
+            }
+            ?>
           <div class="form-group mt-5 ml-5 mr-5">
             <input
             type="text"
