@@ -1,0 +1,171 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.content {
+  min-height: 100%;
+  margin: 0 auto -50px;
+}
+.footer {
+  height: 50px;
+}
+
+.gold-color {
+  color: #fedc72!important;
+}
+
+.title-style {
+  font-family: 'Aguafina Script', cursive;
+  color: #fedc72!important;
+  text-decoration: none!important;
+}
+
+.up-space {
+  margin-top: 7rem;
+}
+
+.img-conf {
+  object-fit: cover;
+  width: inherit;
+}
+
+.side-marge{
+  margin: 0 4rem;
+}
+
+.home-img {
+  object-fit: cover;
+  height: 34rem!important;
+}
+
+.img-conf-profil {
+  object-fit: cover;
+  width: inherit;
+  height: 9rem;
+}
+
+.event {
+  transition: box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.event:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  color: inherit;
+  text-decoration: none;
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.conf-categ {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.onCategory {
+  transition: 0.2s;
+}
+
+.onCategory:hover {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.vertical-super {
+  vertical-align: super;
+}
+
+.letter-space {
+  letter-spacing: 1.7px;
+}
+
+/* RATING STARS */
+
+@import "compass/css3";
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  * {
+    font-size: 1rem;
+  }
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  & > input {
+    display: none;
+    & + label {
+      /* only enough room for the star */
+      display: inline-block;
+      overflow: hidden;
+      text-indent: 9999px;
+      width: 1em;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: '\2606';
+        color: #888;
+      }
+    }
+    &:checked ~ label:before,
+      & + label:hover ~ label:before,
+      & + label:hover:before {
+      content: '\2605';
+      color: #e52;
+      text-shadow: 0 0 1px #333;
+    }
+  }
+
+  /* the hidden clearer */
+  & > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+  }
+  & > .star-cb-clear + label:before {
+    width: .5em;
+  }
+
+  &:hover > input + label:before {
+    content: '\2606';
+    color: #888;
+    text-shadow: none;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: '\2605';
+    color: #e52;
+    text-shadow: 0 0 1px #333;
+  }
+}
+
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: transparent;
+}
